@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE DOOR — Just One More Kiss 💋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Italiana&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="mood-dark">
+<canvas id="fx"></canvas>
+<div class="vignette"></div>
+
+<!-- Top bar: progress + music + restart -->
+<header id="bar" class="hidden">
+  <div class="progress"><span id="progress"></span></div>
+  <button id="music" class="ghost" aria-label="Toggle sound">♪ on</button>
+  <button id="restart" class="ghost" aria-label="Restart">↺</button>
+</header>
+
+<!-- Intro gate (needed so audio is allowed to play) -->
+<section id="gate" class="gate">
+  <p class="small">best with sound 🎧</p>
+  <button id="begin" class="cta">Open the door</button>
+</section>
+
+<main>
+  <!-- 1 -->
+  <section class="scene" data-mood="dark"><div class="box" id="b1"></div></section>
+  <!-- 2 -->
+  <section class="scene" data-mood="dark"><div class="box zoom" id="b2"></div></section>
+  <!-- 3 -->
+  <section class="scene" data-mood="deep"><div class="box" id="b3"></div></section>
+  <!-- 4 -->
+  <section class="scene" data-mood="soft">
+    <div class="box" id="b4">
+      <p class="line show" id="envText"></p>
+      <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open the letter">
+        <div class="flap"></div>
+        <div class="paper"><div id="letter"></div></div>
+        <div class="front"></div>
+      </div>
+      <div class="actions" id="a4"></div>
+    </div>
+  </section>
+  <!-- 5 -->
+  <section class="scene" data-mood="red"><div class="box" id="b5"></div></section>
+  <!-- 6 -->
+  <section class="scene" data-mood="night"><div class="box" id="b6"></div></section>
+</main>
+
+<!-- Final full-screen message -->
+<div id="finale" class="finale"><p id="finaleText"></p><button id="again" class="ghost big">Replay ↺</button></div>
+
+<script src="script.js"></script>
+</body>
+</html>
